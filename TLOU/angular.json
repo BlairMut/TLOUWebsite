@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "TLOU"
+    }
+  },
+  "defaultProject": "TLOU",
+  "cli": {
+    "analytics": false
+  }
 }
