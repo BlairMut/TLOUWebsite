@@ -9,6 +9,7 @@
     width: 100%;
     background-color:black;
     margin-top: 100px;
+    z-index: 1;
 }
 .navbar-light .navbar-nav .nav-link{
     color: rgb(240, 240, 240);

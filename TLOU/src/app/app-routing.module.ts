@@ -7,6 +7,7 @@ import { TeamComponent } from './team/team.component';
 import { StoreComponent } from './store/store.component';
 
 const routes: Routes = [
+  {path: '' , component: HomeComponent},
   {path: 'home', component:HomeComponent  },
   {path: 'about', component:AboutComponent  },
   {path: 'media', component:MediaComponent  },
