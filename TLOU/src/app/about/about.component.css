@@ -1,24 +1,36 @@
+@font-face {
+    font-family: tlouMainFont;
+    src: url("src/assets/Font/Press-Gothic/Press Gothic W01 Regular/Press Gothic W01 Regular.ttf");
+}
+
+@font-face {
+    font-family: tlousecondfont;
+    src: url("src/assets/Font/headliner-no-45/HeadlinerNo.45 DEMO.ttf");
+}
+
 /* Image Background */
-img{
+/* .background{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-position: center;
     object-fit: cover;
-    /* position: absolute; */
-}
+    position: absolute;
+} */
+
+
 
 /* tabs */
 
-
-
 .about .mytabs{
-    position: absolute;
-    top: 30%;
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-    /* max-width: 600px; */
-    margin: 50px auto;
+    margin-left: 24%;
+    width: 1000px;
     padding: 25px;
+    background-color: black;
+    margin-top: 5%;
+    border-radius: 10px;
 }
 
 .mytabs input[type="radio"] {
@@ -26,11 +38,18 @@ img{
 }
 
 .mytabs label{
-    padding: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
     margin: 0;
-    background-color: white;
-    font-weight: bold;
+    background-color: black;
+    font-family: tlouMainFont;
+    font-size: 2rem;
+    transition: 0.5s;
     
+}
+.mytabs label:hover{
+    background-color: white;
 }
 
 .mytabs .tab{
@@ -40,10 +59,11 @@ img{
     color: white;
     order: 1;
     display: none;
+    /* padding-bottom: 200px; */
 }
 
 .mytabs .tab h2{
-    font-size: 2em;
+    font-size: 10em;
 }
 
 .mytabs input[type='radio']:checked + label + .tab{
@@ -53,4 +73,47 @@ img{
 .mytabs input[type='radio']:checked + label{
     background-color: black; 
     color: white;
+}
+/* End of Tabs */
+
+
+/*Game Details */
+li{
+    list-style-type: none;
+}
+h1,h3,h4,h5{
+    font-family: tlousecondfont;
+    letter-spacing: 5px;
+}
+
+h3{
+    font-size: 5rem;
+}
+.gameDetails{
+    position: relative;
+    float: right;
+    margin-right: 350px;
+}
+
+
+
+
+/* Character details */
+.characterDetails{
+    position: relative;
+    font-size: 12px;
+    /* margin-right: 400px; */
+    /* display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    grid-gap: 15px; */
+}
+
+.characterDetails p{
+    font-size: 12px;
+
+}
+
+ h4{
+    font-size: 3rem;
 }

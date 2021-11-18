@@ -8,6 +8,9 @@ import { AboutComponent } from './about/about.component';
 import { MediaComponent } from './media/media.component';
 import { TeamComponent } from './team/team.component';
 import { StoreComponent } from './store/store.component';
+import { Routes } from '@angular/router';
+import { ContentfulService } from 'src/contentful.service';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +25,7 @@ import { StoreComponent } from './store/store.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ContentfulService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
