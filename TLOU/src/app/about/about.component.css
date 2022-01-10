@@ -81,7 +81,7 @@
 li{
     list-style-type: none;
 }
-h1,h3,h4,h5{
+h1,h3,h4,h5,h6{
     font-family: tlousecondfont;
     letter-spacing: 5px;
 }
@@ -92,21 +92,27 @@ h3{
 .gameDetails{
     position: relative;
     float: right;
-    margin-right: 350px;
+    margin-right: 320px;
+}
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 
 
 
 /* Character details */
-.characterDetails{
+.character{
     position: relative;
     font-size: 12px;
+    /* floa t: right; */
+    left: 0px;
     /* margin-right: 400px; */
-    /* display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 5vw);
-    grid-gap: 15px; */
+    margin-left: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-gap: 15px;
 }
 
 .characterDetails p{

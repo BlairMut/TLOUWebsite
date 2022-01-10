@@ -60,6 +60,31 @@ export class ContentfulService {
         return characterFields
       } );
   }
+
+  getMedia(query?: object): Promise<Entry<any>[]> {
+    return this.client.getEntries(Object.assign({
+      content_type: 'mediaGallery'
+    }, query))
+      .then(res => {
+        let mediaFields = res.items.map((el) => {
+          return el.fields
+        })
+        return mediaFields
+      } );
+  }
+
+
+  getCrewMember(query?: object): Promise<Entry<any>[]> {
+    return this.client.getEntries(Object.assign({
+      content_type: 'production'
+    }, query))
+      .then(res => {
+        let crewFields = res.items.map((el) => {
+          return el.fields
+        })
+        return crewFields
+      } );
+  }
   // getGame(contentId): Promise<Entry<any>>{
   //   return this.client.getEntries(Object.assign({
   //     content_type: 'game'

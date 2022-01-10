@@ -10,6 +10,19 @@ import { TeamComponent } from './team/team.component';
 import { StoreComponent } from './store/store.component';
 import { Routes } from '@angular/router';
 import { ContentfulService } from 'src/contentful.service';
+import { LightboxModule } from 'ngx-lightbox';
+
+
+// import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+// import * as Hammer from 'hammerjs';
+
+// export class CustomHammerConfig extends HammerGestureConfig{
+//   overrides = {
+//     'pan': {
+//       direction: Hammer.DIRECTION_ALL,
+//     }
+//   }
+// }
 
 
 @NgModule({
@@ -23,9 +36,10 @@ import { ContentfulService } from 'src/contentful.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LightboxModule
   ],
-  providers: [ContentfulService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+  

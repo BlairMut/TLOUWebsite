@@ -1,1 +1,65 @@
-<p>media works!</p>
+<!-- <script defer src="src\assets\lightbox.js"></script> -->
+
+<section class="media">
+
+    <div class="mytabs">
+        <input type="radio" id="tabfree" name="mytabs" checked="checked">
+        <label for="tabfree">Photos</label>
+
+        <div *ngIf="mediaPhotos" class="tab">
+            <ul class="u-listReset">
+                <h4 style="margin-left: 50px;">The Last of Us Character Photos</h4>
+                <h5 style="margin-left: 50px;">The Last of Us Part 1</h5>
+
+                <div class="photos">
+                    <div *ngFor="let mediaPhotostlou1   of mediaPhotostlou1 ; let i= index" class="media">
+                        <div>
+
+                            <br>
+                            <img
+                                    class="image" src="{{ mediaPhotostlou1.media.fields.file.url }}"
+                                    alt="The Last of Us" width="350" height="180">
+
+
+                        </div>
+
+                        <br>
+                    </div>
+
+                </div>
+            </ul>
+            <br>
+            <br>
+            <ul class="u-listReset">
+                <h4 style="margin-left: 50px;">The Last of Us Character Photos</h4>
+                <h5 style="margin-left: 50px;">The Last of Us Part II</h5>
+
+                <div class="photos">
+                    <div *ngFor="let mediaPhotostlou2   of mediaPhotostlou2 ; let i= index" class="media">
+                        <div>
+
+                            <br>
+                            <img
+                                    class="image" src="{{ mediaPhotostlou2.media.fields.file.url }}"
+                                    alt="The Last of Us" width="350" height="180">
+
+                        </div>
+
+                        <br>
+                    </div>
+
+                </div>
+            </ul>
+        </div>
+
+        <input type="radio" id="tabsilver" name="mytabs">
+        <label for="tabsilver">Videos</label>
+
+        <div class="tab">
+            <p>monkey do </p>
+        </div>
+
+
+
+    </div>
+</section>
