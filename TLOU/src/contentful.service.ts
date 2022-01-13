@@ -82,7 +82,21 @@ export class ContentfulService {
         let crewFields = res.items.map((el) => {
           return el.fields
         })
+        // console.log(crewFields)
         return crewFields
+      } );
+  }
+
+  getProduct(query?: object): Promise<Entry<any>[]> {
+    return this.client.getEntries(Object.assign({
+      content_type: 'store'
+    }, query))
+      .then(res => {
+        let storeFields = res.items.map((el) => {
+          return el.fields
+          // console.log(el.fields)
+        })
+        return storeFields
       } );
   }
   // getGame(contentId): Promise<Entry<any>>{

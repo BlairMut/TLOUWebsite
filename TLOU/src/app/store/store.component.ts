@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ContentfulService } from 'src/contentful.service';
+import { Entry } from 'contentful';
+import _ from 'lodash';
 
 @Component({
   selector: 'app-store',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StoreComponent implements OnInit {
 
-  constructor() { }
+  product: Entry<any>[] = [];
+
+  constructor(private contententfulService: ContentfulService) { }
 
   ngOnInit(): void {
+    this.contententfulService.getProduct()
+    .then(product => {
+      this.product = product
+      console.log(this.product)
+    });
   }
 
 }

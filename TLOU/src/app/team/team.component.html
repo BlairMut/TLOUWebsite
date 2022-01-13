@@ -6,11 +6,13 @@
 
         <div class="tab">
             <h4>The Last of Us Crew</h4>
+            <br>
+            <br>
+            <br>
 
-            <div *ngIf="crew" id="list" >
+            <div *ngIf="crew" id="list">
                 <div *ngIf="Publisher">
                     <div *ngFor="let pub of Publisher">
-                        <br>
                         <h5>Publisher</h5>
                         <p>{{pub.crewMember}}</p>
                     </div>
@@ -44,7 +46,7 @@
                     <h5>Writer</h5>
                     <div *ngFor="let w of writer">
                         <!-- <img src="{{w.profile.fields.file.url}}" alt="" height="50" width="40"> -->
-                        <p ><img src="{{w.profile.fields.file.url}}" alt="" height="50" width="40">{{w.crewMember}}</p>
+                        <p>{{w.crewMember}}</p>
                     </div>
 
                 </div>
@@ -86,13 +88,7 @@
                 </div>
 
                 <br>
-                <!-- <div *ngIf="artDepartment">
-                    <h5>Art Department</h5>
-                    <div *ngFor="let adep of artDepartment">
-                        <p>{{adep.crewMember}}</p>
-                    </div>
 
-                </div> -->
 
                 <br>
                 <div *ngIf="makeup">
@@ -120,15 +116,24 @@
                     </div>
 
                 </div>
+                <br>
+
+                <div *ngIf="artDepartment">
+                    <h5>Art Department</h5>
+                    <div *ngFor="let adep of artDepartment">
+                        <p>{{adep.crewMember}}</p>
+                    </div>
+
+                </div>
 
                 <br>
-                <!-- <div *ngIf="soundDepartment">
+                <div *ngIf="soundDepartment">
                     <h5>Sound Department</h5>
                     <div *ngFor="let sd of soundDepartment">
                         <p>{{sd.crewMember}}</p>
                     </div>
 
-                </div> -->
+                </div>
 
 
             </div>
