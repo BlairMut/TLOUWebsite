@@ -17,7 +17,7 @@ export class AboutComponent implements OnInit {
   tlou2Characters: any[] = [];
   ready: boolean = true;
   tlou: String = "tlou1";
-
+  
   constructor(
     private router: Router,
     private contentfulService: ContentfulService

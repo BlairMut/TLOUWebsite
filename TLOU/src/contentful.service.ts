@@ -87,6 +87,19 @@ export class ContentfulService {
       } );
   }
 
+  getVideos(query?: object): Promise<Entry<any>[]> {
+    return this.client.getEntries(Object.assign({
+      content_type: 'videoGallery'
+    }, query))
+      .then(res => {
+        let videoFields = res.items.map((el) => {
+          return el.fields
+          // console.log(el.fields)
+        })
+        return videoFields
+      } );
+  }
+
   getProduct(query?: object): Promise<Entry<any>[]> {
     return this.client.getEntries(Object.assign({
       content_type: 'store'

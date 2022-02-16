@@ -10,12 +10,23 @@
 }
 
 /* Tabs */
+
+body{
+    background-image: url("/assets/1042734.jpg");
+    background-position: center;
+    
+    width: auto;
+    background-repeat: repeat-y;
+
+}
+
 .media .mytabs{
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    margin-left: 10%;
-    width: 1500px;
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 100%;
     padding: 25px;
     background-color: black;
     margin-top: 5%;
@@ -60,7 +71,7 @@
 }
 
 .mytabs input[type='radio']:checked + label{
-    background-color: black; 
+    background-color:black; 
     color: white;
 }
 /* Tabs */
@@ -100,6 +111,7 @@ h3{
 .image{
     filter: grayscale(100%);
     transition: 0.5s;
+    background-color: black;
 }
 .image:hover{
     filter: grayscale(0%);
@@ -107,21 +119,46 @@ h3{
 }
 
 
-/* LIGHTBOX STYLE*/
+/* Overlay Text */
+.container {
+    position: relative;
+    /* width: 50%;
+    max-width: 300px; */
+  }
 
-#lightbox{
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0, .8);
-    display: none;
+.overlay {
+    position: absolute; 
+    bottom: 0;
+    transform: inherit;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1; 
+    width: 350px;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    /* margin-right: 200px; */
+    text-align: right;
+  }
+  /* .overlay:hover{
+    transform: scale(1.1);
 
-}
+  } */
 
-#lightbox.active{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+  .container:hover .overlay{
+      opacity: 1;
+  }
+  .videos{
+    position: relative;
+    font-size: 12px;
+    /* floa t: right; */
+    left: 0px;
+    /* margin-right: 400px; */
+    /* margin-left: 50px; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-gap: 30px;
+  }

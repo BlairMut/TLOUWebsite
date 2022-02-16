@@ -11,6 +11,9 @@ import { StoreComponent } from './store/store.component';
 import { Routes } from '@angular/router';
 import { ContentfulService } from 'src/contentful.service';
 import { LightboxModule } from 'ngx-lightbox';
+import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
+// import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
 
 
 // import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
@@ -36,7 +39,9 @@ import { LightboxModule } from 'ngx-lightbox';
   ],
   imports: [
     BrowserModule,
+    NgxYoutubePlayerModule.forRoot(),
     AppRoutingModule,
+
     LightboxModule
   ],
   bootstrap: [AppComponent]

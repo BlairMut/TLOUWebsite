@@ -1,65 +1,97 @@
 <!-- <script defer src="src\assets\lightbox.js"></script> -->
 
-<section class="media">
+<body>
+    <p>.</p>
+    <section class="media">
 
-    <div class="mytabs">
-        <input type="radio" id="tabfree" name="mytabs" checked="checked">
-        <label for="tabfree">Photos</label>
+        <div class="mytabs">
+            <input type="radio" id="tabfree" name="mytabs" checked="checked">
+            <label for="tabfree">Photos</label>
 
-        <div *ngIf="mediaPhotos" class="tab">
-            <ul class="u-listReset">
-                <h4 style="margin-left: 50px;">The Last of Us Character Photos</h4>
-                <h5 style="margin-left: 50px;">The Last of Us Part 1</h5>
+            <div *ngIf="mediaPhotos" class="tab">
+                <ul class="u-listReset">
+                    <h4 style="margin-left: 50px;">The Last of Us Character Photos</h4>
+                    <h5 style="margin-left: 50px;">The Last of Us Part 1</h5>
 
-                <div class="photos">
-                    <div *ngFor="let mediaPhotostlou1   of mediaPhotostlou1 ; let i= index" class="media">
-                        <div>
+                    <div class="photos">
+                        <div *ngFor="let mediaPhotostlou1   of mediaPhotostlou1 ; let i= index" class="media">
+                            <div class="container">
+
+                                <br>
+                                <a href="{{ mediaPhotostlou1.media.fields.file.url }}" data-lightbox="mygallery"><img
+                                        class="image" src="{{ mediaPhotostlou1.media.fields.file.url }}"
+                                        alt="The Last of Us" width="350" height="180"></a>
+
+                                <div class="overlay">{{mediaPhotostlou1.imageDescription}}</div>
+
+
+
+                            </div>
 
                             <br>
-                            <img
-                                    class="image" src="{{ mediaPhotostlou1.media.fields.file.url }}"
-                                    alt="The Last of Us" width="350" height="180">
-
-
                         </div>
 
+                    </div>
+                </ul>
+                <br>
+                <br>
+                <ul class="u-listReset">
+                    <h4 style="margin-left: 50px;">The Last of Us Character Photos</h4>
+                    <h5 style="margin-left: 50px;">The Last of Us Part II</h5>
+
+                    <div class="photos">
+                        <div *ngFor="let mediaPhotostlou2   of mediaPhotostlou2 ; let i= index" class="media">
+                            <div class="container">
+
+                                <br>
+                                <a href="{{ mediaPhotostlou2.media.fields.file.url }}" data-lightbox="mygallery1"><img
+                                        class="image" src="{{ mediaPhotostlou2.media.fields.file.url }}"
+                                        alt="The Last of Us" width="350" height="180"></a>
+                                <div class="overlay">{{mediaPhotostlou2.imageDescription}}</div>
+
+
+
+                            </div>
+
+                            <br>
+                        </div>
+
+                    </div>
+                </ul>
+            </div>
+
+            <input type="radio" id="tabsilver" name="mytabs">
+            <label for="tabsilver">Videos</label>
+
+            <div class="tab">
+
+                <h1>The Last of Us Part I and II Gameplay</h1>
+                <br>
+                <div *ngIf="mediaVideos" class="videos">
+
+                    <div *ngFor="let mediaVideos of mediaVideos" > 
                         <br>
+                        <h4>{{ mediaVideos.title }}</h4>
+                        <youtube-player videoId= {{mediaVideos.videoId}}
+                        [height]="250" 
+                        [width]="500"
+                        (ready) = "savePlayer($event)"
+                        (changer) = "onStateChange($event)"
+                        ></youtube-player>
                     </div>
 
                 </div>
-            </ul>
-            <br>
-            <br>
-            <ul class="u-listReset">
-                <h4 style="margin-left: 50px;">The Last of Us Character Photos</h4>
-                <h5 style="margin-left: 50px;">The Last of Us Part II</h5>
+                <!-- <youtube-player videoId="GgfmtWgo-tE" 
+                        [height]="250" 
+                        [width]="500"
+                        (ready) = "savePlayer($event)"
+                        (changer) = "onStateChange($event)"
+                        ></youtube-player> -->
+            </div>
 
-                <div class="photos">
-                    <div *ngFor="let mediaPhotostlou2   of mediaPhotostlou2 ; let i= index" class="media">
-                        <div>
 
-                            <br>
-                            <img
-                                    class="image" src="{{ mediaPhotostlou2.media.fields.file.url }}"
-                                    alt="The Last of Us" width="350" height="180">
 
-                        </div>
-
-                        <br>
-                    </div>
-
-                </div>
-            </ul>
         </div>
+    </section>
 
-        <input type="radio" id="tabsilver" name="mytabs">
-        <label for="tabsilver">Videos</label>
-
-        <div class="tab">
-            <p>monkey do </p>
-        </div>
-
-
-
-    </div>
-</section>
+</body>
