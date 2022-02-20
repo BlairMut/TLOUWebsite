@@ -26,7 +26,7 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
     this.contentfulService.getGames()
     .then(games => {
-      this.games = games
+      this.games = _.sortBy(games, [function(o) { return o.position.position;}]);
       console.log(games)
     });
     
@@ -34,6 +34,7 @@ export class AboutComponent implements OnInit {
     .then(characters => {
       // this.characters = _.sortBy(this.characters, [function(o) {return o.position;}]);
       this.characters = _.sortBy(characters, [function(o) { return o.game.position;}]);
+      
       
       console.log(characters);
       

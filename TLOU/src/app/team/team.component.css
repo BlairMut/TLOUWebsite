@@ -9,6 +9,11 @@
     src: url("src/assets/Font/headliner-no-45/HeadlinerNo.45 DEMO.ttf");
 }
 
+body{
+    
+    background-image: url("/assets/1042734.jpg");
+}
+
 h1,h3,h4,h5,h6{
     font-family: tlousecondfont;
     letter-spacing: 5px;

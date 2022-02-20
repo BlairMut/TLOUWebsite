@@ -1,10 +1,17 @@
+body{
+    
+    background-image: url("/assets/1042734.jpg");
+    background-size: 100%;
+}
 .homecontent{
-    position: absolute;
-    top: 15%;
+    position: relative;
+    margin-top: 5%;
     left: 25%;
     background-color: rgb(0, 0, 0);
     padding: 50px;
     width: 1000px;
+    border-radius: 10px;
+    margin-bottom: 25px;
 }
 .homecontent h1,h4{
     color: white;

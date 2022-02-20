@@ -1,18 +1,22 @@
-<div class="homecontent">
-    <h4>Store</h4>
-
-    <div *ngIf="product">
-        <div *ngFor="let prod of product">
-
-            <img src="{{prod.product.fields.file.url}}" alt="" height="180" width="150">
-           
-            <a href="{{prod.link}}" target="_blank" style="padding-left: 20px;">Buy now</a>
+<body>
+    <p>.</p>
+    <div class="homecontent">
+        <h4>Store</h4>
+    
+        <div *ngIf="product">
+            <div *ngFor="let prod of product">
+    
+                <img src="{{prod.product.fields.file.url}}" alt="" height="180" width="150">
+               
+                <a href="{{prod.link}}" target="_blank" style="padding-left: 20px;">Buy now</a>
+                <br>
+                <br><br><br>
+                
+    
+            </div>
             <br>
-            <br><br><br>
-            
-
+    
         </div>
-        <br>
-
     </div>
-</div>
+    
+</body>
