@@ -9,17 +9,18 @@
     src: url("src/assets/Font/headliner-no-45/HeadlinerNo.45 DEMO.ttf");
 }
 
-body{
+/* body{
     
-    background-image: url("/assets/1042734.jpg");
-}
+    background-image: url("/assets/1065466.jpg");
+    background-attachment: fixed;
+} */
 
 h1,h3,h4,h5,h6{
     font-family: tlousecondfont;
     letter-spacing: 5px;
 }
 p{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     letter-spacing: 5px;
 }
 
@@ -34,6 +35,7 @@ p{
     background-color: black;
     margin-top: 5%;
     border-radius: 10px;
+    margin-bottom: 200px;
 }
 
 .mytabs input[type="radio"] {
@@ -46,7 +48,7 @@ p{
     border-radius: 10px;
     margin: 0;
     background-color: black;
-    font-family: tlouMainFont;
+    font-family: tlousecondfont;
     font-size: 2rem;
     transition: 0.5s;
     
@@ -83,13 +85,79 @@ p{
 
 #list{
     position: relative;
-    /* font-size: 12px; */
-    /* float: right; */
-    /* margin-top: 400px; */
-    /* margin-left: 50px; */
     display: grid;
     /* display: inline-flex; */
     grid-template-columns: repeat(8, 1fr);
 
     grid-gap: 5px;
+}
+
+@media screen and (max-width:800px){
+
+    h1,h3,h4,h5,h6{
+        font-family: tlousecondfont;
+        letter-spacing: 5px;
+    }
+    p{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        letter-spacing: 5px;
+    }
+    
+    /* Tabs */
+    .media .mytabs{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 0%;
+        width: 1500px;
+        padding: 25px;
+        background-color: black;
+        margin-top: 10%;
+        border-radius: 10px;
+        margin-bottom: 200px;
+    }
+    
+    .mytabs input[type="radio"] {
+        display: none;
+    }
+    
+    .mytabs label{
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 10px;
+        margin: 0;
+        background-color: black;
+        font-family: tlousecondfont;
+        font-size: 2rem;
+        transition: 0.5s;
+        
+    }
+    .mytabs label:hover{
+        background-color: white;
+    }
+    
+    .mytabs .tab{
+        width: 100%;
+        padding: 20px;
+        background: black;
+        color: white;
+        order: 1;
+        display: none;
+        /* padding-bottom: 200px; */
+    }
+    
+    .mytabs .tab h2{
+        font-size: 10em;
+    }
+
+    #list{
+        position: relative;
+        display: grid;
+        /* display: inline-flex; */
+        grid-template-columns: repeat(1, 1fr);
+    
+        grid-gap: 5px;
+    }
+
+    
 }

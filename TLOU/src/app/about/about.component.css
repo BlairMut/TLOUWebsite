@@ -9,25 +9,16 @@
 }
 
 /* Image Background */
-/* .background{
-    margin-top: 10%;
-    width: 100%;
-    height: 100vh;
-    background-size: auto;
-    object-position: center;
-    object-fit: cover;
-    position: absolute;
-    background-repeat: repeat;
-} */
-body{
+
+/* body{
     
-    background-image: url("/assets/1042734.jpg");
-}
+    background-image: url("/assets/1065466.jpg");
+} */
 
 
 /* tabs */
 
-.about .mytabs{
+.mytabs{
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -36,12 +27,16 @@ body{
     padding: 25px;
     background-color: black;
     margin-top: 5%;
-    /* padding-top: 5%; */
     border-radius: 10px;
+    margin-bottom: 200px;
 }
 
 .mytabs input[type="radio"] {
     display: none;
+}
+
+.characterHeading{
+    margin-left: 50px;
 }
 
 .mytabs label{
@@ -50,7 +45,7 @@ body{
     border-radius: 10px;
     margin: 0;
     background-color: black;
-    font-family: tlouMainFont;
+    font-family: tlousecondfont;
     font-size: 2rem;
     transition: 0.5s;
     
@@ -88,9 +83,19 @@ body{
 li{
     list-style-type: none;
 }
-h1,h3,h4,h5,h6{
+h1{
     font-family: tlousecondfont;
     letter-spacing: 5px;
+    /* font-size: 10px; */
+}
+h3,h4,h5,h6{
+    font-family: tlousecondfont;
+    letter-spacing: 5px;
+    /* font-size: 10px; */
+}
+
+.summary{
+    width: 500px;
 }
 
 h3{
@@ -98,8 +103,8 @@ h3{
 }
 .gameDetails{
     position: relative;
-    float: right;
-    margin-right: 320px;
+    /* float: right; */
+    /* margin-right: 800px; */
 }
 
 
@@ -126,4 +131,123 @@ h3{
 
  h4{
     font-size: 3rem;
+}
+
+@media screen and (max-width:800px){
+
+    .characterHeading{
+        margin-left: 0px;
+    }
+
+    .summary{
+        width: 100%;
+    }
+
+    .mytabs{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 0%;
+        width: 100%;
+        padding: 0px;
+        background-color: black;
+        margin-top: 10%;
+        /* padding-top: 5%; */
+        border-radius: 10px;
+        /* margin-bottom: 200px; */
+    }
+    
+    .mytabs input[type="radio"] {
+        display: none;
+    }
+    
+    .mytabs label{
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 10px;
+        margin: 0;
+        background-color: black;
+        font-family: tlouMainFont;
+        font-size: 2rem;
+        transition: 0.5s;
+        
+    }
+    .mytabs label:hover{
+        background-color: white;
+    }
+    
+    .mytabs .tab{
+        width: 100%;
+        padding: 20px;
+        background: black;
+        color: white;
+        order: 1;
+        display: none;
+        padding-bottom: 200px;
+    }
+    
+    .mytabs .tab h2{
+        font-size: 2em;
+    }
+
+    .poster{
+        height: 150px;
+        width: 120px;
+    }
+
+    li{
+        list-style-type: none;
+    }
+    h1{
+        font-family: tlousecondfont;
+        letter-spacing: 2px;
+        font-size: 2em;
+    }
+    h3,h4,h5,h6{
+        font-family: tlousecondfont;
+        letter-spacing: 2px;
+        font-size: 1em;
+    }
+    p{
+        font-size: 10px;
+    }
+    
+    h3{
+        font-size: 5rem;
+    }
+    .gameDetails{
+        position: relative;
+        float:none;
+        margin-right: 0px;
+    }
+    
+    
+    /* Character details */
+    .character{
+        position: relative;
+        font-size: 5px;
+        /* floa t: right; */
+        left: 0px;
+        /* margin-right: 400px; */
+        margin-left: 0px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    
+        grid-gap: 15px;
+    }
+    .headshots{
+        height: 100px;
+        width: 80px;
+    }
+    
+    .characterDetails p{
+        font-size: 6px;
+    
+    }
+    
+     h4{
+        font-size: 1rem;
+    }
+    
+    
 }

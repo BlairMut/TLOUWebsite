@@ -1,30 +1,29 @@
-<!-- <img class="home" src="assets/1065467.png" alt="" height="100%" width="100%" style="position: absolute;"> -->
 <nav class="navbar navbar-expand-lg navbar-light ">
     <!-- <a class="navbar-brand" href="#">The Last of Us</a> -->
-    <img href="#" src="\assets\LOT logo.png" alt="monkey" width="300" height="80">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <img class="logo" routerLink="home" src="\assets\LOT logo.png" alt="logo">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" routerLink="home" >Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" data-toggle="collapse" routerLink="home" >Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="about" >About</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" routerLink="media" >Media</a>
+          <a class="nav-link" data-toggle="collapse" routerLink="about" >About</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="team" >Team</a> 
+          <a class="nav-link" data-toggle="collapse" routerLink="media" >Media</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="store" >Store</a>
+          <a class="nav-link" data-toggle="collapse" routerLink="team" >Team</a> 
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="collapse" routerLink="store" >Store</a>
         </li>
 
 

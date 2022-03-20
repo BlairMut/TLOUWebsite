@@ -3,32 +3,37 @@
     src: url("src/assets/Font/Press-Gothic/Press Gothic W01 Regular/Press Gothic W01 Regular.ttf");
 }
 
-/* Image Background */
-/* .home img{
-    width: 100%;
-    height: 100vh;
-    object-position: center;
-    object-fit: cover;
-    position: absolute;
+@font-face {
+    font-family: tlousecondfont;
+    src: url("src/assets/Font/headliner-no-45/HeadlinerNo.45 DEMO.ttf");
+}
+/* body{
+    background-image: url("/assets/1065466.png");
 } */
+
 
 /* Welcome Message */
 .homecontent{
     position: absolute;
+    border-radius: 10px;
     top: 60%;
     left: 5%;
     background-color: rgb(0, 0, 0);
     padding: 50px;
+    opacity: 80%;
 }
 .homecontent h1{
     color: white;
-    font-family: tlouMainFont;
+    font-family: tlousecondfont;
     font-size: 5em;
 }
 
 .homecontent p{
     color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 800px;
     font-size: 1.5em;
+    
 }
 
 /* .home{
@@ -60,9 +65,11 @@
     }
 } */
 
-@media screen and (max-width:600px){
-    .home img{
-        height: 100vh;
+@media screen and (max-width:800px){
+    body{
+        background-image: url("/assets/1065467.png");
+        background-size: contain;
+    
     }
     .home .moviebackground{
         position: absolute;
@@ -77,5 +84,5 @@
     .home .homecontent p{
         font-size: 11px;
     }
-    
+
 }

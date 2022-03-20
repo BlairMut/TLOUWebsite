@@ -29,7 +29,7 @@
 
             ],
             "scripts": [
-              "./node_modules/lightbox2/dist/js/lightbox-plus-jquery.min.js"
+              "./node_modules/lightbox2/dist/js/lightbox.min.js"
             ]
           },
           "configurations": {
