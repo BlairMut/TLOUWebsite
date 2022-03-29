@@ -66,23 +66,31 @@
 } */
 
 @media screen and (max-width:800px){
-    body{
+    /* body{
         background-image: url("/assets/1065467.png");
         background-size: contain;
     
-    }
+    } */
     .home .moviebackground{
         position: absolute;
         width: 0;
+    }
+    .homecontent h1{
+        color: white;
+        font-family: tlousecondfont;
+        font-size: 3em;
     }
     .homecontent{
         opacity: 80%;
         top: 70%;
         padding: 20px;
+        width: 100%;
+        left: 0%;
 
     }
     .home .homecontent p{
         font-size: 11px;
+        width: 100%;
     }
 
 }
