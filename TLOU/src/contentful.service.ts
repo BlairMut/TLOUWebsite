@@ -2,28 +2,27 @@ import { Injectable } from '@angular/core';
 import * as contentful from 'contentful';
 import { environment } from './environments/environment';
 import { createClient,Entry } from 'contentful';
-import { Observable } from 'rxjs';
+import { config, Observable } from 'rxjs';
 import { from } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { query } from '@angular/animations';
+
+const CONFIG = {
+  spaceId: 'folxikxh0hat',
+  token: 'zygMYXgTwIenUcjNKhK9_noPxAW-PYntvr1PVdEE-QQ'
+}
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContentfulService {
-  logContent(arg0: string) {
-    throw new Error('Method not implemented.');
-  }
-
- private client: any;
-  
-
+ private client
   constructor() { 
-    this.client = contentful.createClient({
-      space: environment.contentful.spaceId,
-      accessToken: environment.contentful.token
-    })
+    this.client = createClient({
+      space: CONFIG.spaceId,
+      accessToken: CONFIG.token
+    });
   }
 
   //console logs a response for debugging
