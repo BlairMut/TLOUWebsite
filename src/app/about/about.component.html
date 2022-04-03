@@ -1,0 +1,113 @@
+    <body>
+        <section class="media">
+            <div class="mytabs">
+                <input type="radio" id="tabfree" name="mytabs" checked="checked">
+                <label for="tabfree">Games</label>
+                <div *ngIf="games" class="tab">
+                    <ul class="u-listReset">
+                        <li *ngFor="let game of games" class="games">
+                            <h1>{{ game.gameName }}</h1>
+                            <div class="game">
+                                <img class="poster" src="{{game.gamePoster.fields.file.url}}" alt="tlou" width="250"
+                                    height="300">
+                                <div class="gameDetails">
+                                    <h6>Game genre:</h6>
+                                    <p><i>{{ game.genre }}</i></p>
+                                    <h6>Platform:</h6>
+                                    <p><i>{{ game.platform }}</i></p>
+                                    <h6>Release Date:</h6>
+                                    <p><i>{{ game.releaseDate }}</i></p>
+                                    <h6>Remastered Release Date:</h6>
+                                    <p><i>{{ game.remasteredReleaseDate }}</i></p>
+                                    <h6>Theme:</h6>
+                                    <p><i>{{ game.theme }}</i></p>
+                                </div>
+    
+                                <br>
+    
+                                <h6>Summary:</h6>
+                                <p class="summary">
+                                    {{game.summary}}
+                                </p>
+                            </div>
+    
+                            <br>
+                        </li>
+                    </ul>
+    
+                </div>
+    
+                <input type="radio" id="tabsilver" name="mytabs">
+                <label for="tabsilver">Character</label>
+                <div *ngIf="tlouCharacters" class="tab">
+                    <ul class="u-listReset">
+    
+                        <div class="characterHeading">
+                            <h5>The Last of Us Character List</h5>
+                            <h5>The Last of Us Part 1</h5>
+                        </div>
+    
+                        <div class="character">
+                            <li *ngFor="let tlouCharacter of tlouCharacters" class="characters">
+                                <div>
+    
+                                    <br>
+                                    <img class="headshots" src="{{tlouCharacter.image.fields.file.url}}" alt="tlou"
+                                        width="150" height="180">
+    
+                                    <div class="characterDetails">
+    
+                                        <p> <b>Name: </b> <i>{{ tlouCharacter.characterName }}</i></p>
+                                        <p> <b>Age: </b> <i>{{ tlouCharacter.age }}</i></p>
+                                        <p> <b>Voiced By: </b> <i>{{ tlouCharacter.voicedBy }}</i></p>
+    
+                                    </div>
+    
+    
+                                </div>
+    
+                                <br>
+                            </li>
+    
+                        </div>
+                    </ul>
+    
+                    <ul class="u-listReset">
+                        <div class="characterHeading">
+                            <h5>The Last of Us Part 2</h5>
+                        </div>
+    
+                        <div class="character">
+    
+                            <li *ngFor="let tlou2Character of tlou2Characters" class="characters">
+                                <div>
+    
+                                    <br>
+                                    <img class="headshots" src="{{tlou2Character.image.fields.file.url}}" alt="tlou"
+                                        width="150" height="220">
+    
+                                    <div class="characterDetails">
+                                        <br>
+    
+                                        <p> <b>Name: </b> <i>{{ tlou2Character.characterName }}</i></p>
+                                        <p> <b>Age: </b> <i>{{ tlou2Character.age }}</i></p>
+                                        <p> <b>Voiced By: </b> <i>{{ tlou2Character.voicedBy }}</i></p>
+    
+                                    </div>
+    
+    
+                                </div>
+    
+                                <br>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+    
+    
+    
+            </div>
+        
+
+        </section>
+</body>

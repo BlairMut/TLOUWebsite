@@ -1,0 +1,259 @@
+/* Fonts */
+@font-face {
+    font-family: tlouMainFont;
+    src: url("src/assets/Font/Press-Gothic/Press Gothic W01 Regular/Press Gothic W01 Regular.ttf");
+}
+
+@font-face {
+    font-family: tlousecondfont;
+    src: url("src/assets/Font/headliner-no-45/HeadlinerNo.45 DEMO.ttf");
+}
+
+/* Tabs */
+
+/* body{
+    background-image: url("/assets/1065466.png");
+
+} */
+
+.media .mytabs{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 100%;
+    padding: 20px;
+    background-color: black;
+    opacity: 1;
+    margin-top: 2%;
+    border-radius: 10px;
+    margin-bottom: 200px;
+}
+
+.mytabs input[type="radio"] {
+    display: none;
+}
+
+.mytabs label{
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+    background-color: black;
+    font-family: tlousecondfont;
+    font-size: 3rem;
+    transition: 0.5s;
+    
+}
+.mytabs label:hover{
+    background-color: white;
+}
+
+.mytabs .tab{
+    width: 100%;
+    /* padding: 20px; */
+    background: black;
+    color: white;
+    order: 1;
+    display: none;
+    margin-left: 100px;
+    margin-bottom: 200px;
+    /* padding-bottom: 200px; */
+}
+
+.mytabs .tab2{
+    width: 100%;
+    background: black;
+    color: white;
+    order: 1;
+    display: none;
+    margin-left: 100px;
+    margin-bottom: 200px;
+}
+
+.mytabs .tab h2{
+    font-size: 10em;
+}
+
+.mytabs input[type='radio']:checked + label + .tab{
+    display: block; 
+}
+.mytabs input[type='radio']:checked + label + .tab2{
+    display: block; 
+}
+
+.mytabs input[type='radio']:checked + label{
+    background-color:black; 
+    color: white;
+}
+/* Tabs */
+
+/* Content */
+
+li{
+    list-style-type: none;
+}
+h1,h4,h5{
+    font-family: tlousecondfont;
+    letter-spacing: 5px;
+    font-size: 26px;
+}
+
+h3{
+    
+    font-family: tlousecondfont;
+    font-size: 4rem;
+}
+
+
+.photos{
+    position: relative;
+    font-size: 12px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+}
+
+.image{
+    filter: grayscale(100%);
+    transition: 0.5s;
+    background-color: black;
+}
+.image:hover{
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+
+/* Overlay Text */
+.container {
+    position: relative;
+  }
+.overlay {
+    position: absolute; 
+    bottom: 0;
+    transform: inherit;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1; 
+    width: 350px;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    text-align: right;
+  }
+  /* .overlay:hover{
+    transform: scale(1.1);
+
+  } */
+
+  .container:hover .overlay{
+      opacity: 1;
+  }
+  .videos{
+    position: relative;
+    font-size: 12px;
+    /* floa t: right; */
+    left: 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-gap: 30px;
+  }
+
+  .YTvideo{
+      width: 40px;
+      height: 250px;
+  }
+
+/* Responsive */
+
+  @media screen and (max-width:800px){
+
+
+    .mytabs .tab{
+        width: 100%;
+        /* padding: 20px; */
+        background: black;
+        color: white;
+        order: 1;
+        display: none;
+        margin-left: 5px;
+        margin-bottom: 200px;
+        /* padding-bottom: 200px; */
+    }
+    
+    .mytabs .tab2{
+        width: 100%;
+        background: black;
+        color: white;
+        order: 1;
+        display: none;
+        margin-left: 0px;
+        margin-bottom: 200px;
+    }
+
+    .photos{
+        position: relative;
+        font-size: 12px;
+        margin-left: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+    }
+    .image{
+        filter: grayscale(100%);
+        transition: 0.5s;
+        background-color: black;
+        height: 52px;
+        width: 120px;
+    }
+    .media .mytabs{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 0px;
+        width: 100%;
+        background-color: black;
+        border-radius: 10px;
+    }
+    .overlay {
+        position: absolute; 
+        transform: inherit;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5); /* Black see-through */
+        color: #f1f1f1; 
+        width: 120px;
+        transition: .5s ease;
+        opacity:0;
+        color: white;
+        font-size: 6px;
+        padding: 2px;
+        text-align: right;
+    }
+    .youtube-player{
+        width: 82px;
+        height: 170px;
+
+    }
+    .videos{
+        position: relative;
+        font-size: 12px;
+        left: 0px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 15px;
+    }
+    .YTvideo{
+        width: 40px;
+        height: 250px;
+    }
+    h1,h3,h4,h5{
+        font-family: tlousecondfont;
+        letter-spacing: 5px;
+        font-size: 24px;
+    }
+    
+}
