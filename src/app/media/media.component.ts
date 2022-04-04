@@ -3,7 +3,6 @@ import { ContentfulService } from 'src/contentful.service';
 import { Entry } from 'contentful';
 import _ from 'lodash';
 
-import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from 'ngx-gallery';
 
 @Component({
   selector: 'app-media',
@@ -19,7 +18,6 @@ export class MediaComponent implements OnInit {
   mediaVideos: Entry<any>[] = [];
   player: YT.Player;
   // videoID: Entry<any>[] = [];
-
 
   constructor(private contentfulService:ContentfulService) {
 
